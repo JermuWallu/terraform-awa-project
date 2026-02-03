@@ -7,3 +7,23 @@ variable "container_name" {
     type = string
     default = "ExampleMongodbContainer"
 }
+
+variable "mongodb_username" {
+  description = "MongoDB root username"
+  type        = string
+  default     = "admin"
+  sensitive   = true
+}
+
+variable "mongodb_password" {
+  description = "MongoDB root password"
+  type        = string
+  default     = "password"
+  sensitive   = true
+}
+
+variable "awa_project_path" {
+  description = "Path to the AWA project directory"
+  type        = string
+  default     = "../AWA-project-work"
+}
