@@ -18,7 +18,7 @@ resource "docker_network" "private_network" {
 }
 
 resource "docker_image" "mongodb" {
-  name         = "mongodb:8.2"
+  name         = "mongo:8.2"
   keep_locally = false
 }
 resource "docker_container" "mongodb" {
@@ -105,7 +105,7 @@ resource "docker_container" "client" {
   image = docker_image.client.image_id
 
   ports {
-    internal = 80
+    internal = 3000
     external = 8080
   }
 
